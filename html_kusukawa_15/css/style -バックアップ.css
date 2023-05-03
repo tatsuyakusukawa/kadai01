@@ -1,0 +1,216 @@
+/* ここから下に記載していく */
+@charset "utf-8";
+
+
+/* 全体設定 */
+
+
+html {
+    width: auto;  /* autoによる既定値 */
+    text-align: center;
+}
+
+body{
+    margin-right:0 auto;
+    margin-left:0 auto;
+}
+
+
+main{
+    font-size: 1rem;
+    color:#222222;
+    margin: auto;
+    line-height: 2;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+/* 実験 
+
+*/
+
+/* ここからは個別の設定をする */
+
+
+/* header logo */
+
+.header-logo {/*親div*/
+    position: relative;/*相対配置*/
+}
+
+.header-text{
+    font-size: 20px;
+    display: block;
+    position: absolute;/*絶対配置*/
+    color: #fff;/*文字は白に*/
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    letter-spacing: 4px;
+}  
+
+.header-logo img {
+    width: 100%;
+}
+
+
+
+/* nav */
+
+body {
+    padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+}
+
+.header{ 
+    width:100%;
+    display:flex;  /*ロゴとulを横に並べる*/
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.nav{
+    font-size: 21px;
+    padding-right: 50px;
+}
+
+ul.nav{
+    padding: 0;
+    text-align: center;
+    align-items: center; 
+}
+
+ul.nav li{
+    display: inline-block;
+    margin-left: 40px;
+    align-items: center; 
+}
+
+/* 文字回りの設定 */
+
+.eng-titile{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.jpn-titile{
+    font-size: 18px;
+    font-weight:bold;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+
+/* aboutに関することを書く */
+
+.yellow-titile{
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.black-titile{
+    color: #222222;
+    font-weight: bold;
+}
+
+.titile-margin{
+    padding: 60px 0 30px;
+}
+
+.about-headline{
+    margin: 0 0 60px;
+}
+
+.about-text{
+    margin: 0 0 40px;
+}
+
+.about-wrapper{
+    margin: 0 0 80px;
+}
+
+/* course部分を書く！ */
+
+.course_content{
+    margin: 0 0 60px;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+}
+
+.course_box{
+    display: flex;
+    text-align: left;
+    margin: 0 0 0 0;
+}
+
+
+.course_img{
+    width: 50%;
+    height: auto;
+}
+
+.course_text{
+    width: 50%;
+    padding: 120px 0;
+    background-color: #fafafa;
+}
+
+
+.course-wrapper{
+    margin: 0 0 60px;
+}
+/* news */
+
+.news_box{
+    display: flex;
+    flex-basis: 300px;
+    margin: 0 0 60px;
+}
+
+/* access */
+
+iframe {
+    width: 100%;
+    margin: 60px 0 60px;
+}
+
+.access_wrapper{
+    background-color: #fafafa;
+}
+
+
+/* btnの設定をする */
+
+.btn{
+    display: block;
+    background-color: #ffd61a;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 21px 0;
+    margin: auto;
+    width: 300px;
+    ;
+}
+
+.btn:hover{
+    border-bottom-color: transparent;
+    transform: translateY(0.1875em);
+}

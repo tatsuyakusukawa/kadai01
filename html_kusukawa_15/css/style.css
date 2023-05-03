@@ -1,0 +1,467 @@
+/* ここから下に記載していく */
+@charset "utf-8";
+
+/* 全体設定 */
+
+
+html {
+    width: auto;  /* autoによる既定値 */
+    text-align: center; /*インライン要素を真ん中にする*/
+    font-size: 62.5%;   /*1rem=10pxにする*/
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+    scroll-behavior:smooth;
+}
+
+#body{
+    width: 120rem; /*HPの横幅を120remに固定する*/
+    margin-right: auto;/*bodyを真ん中に*/
+    margin-left: auto;/*bodyを真ん中に*/
+    text-align: center;/*bodyの中にあるやつを真ん中に*/
+}
+
+
+main{
+    font-size: 1.6rem;
+    color:#222222;
+    margin: auto;
+    line-height: 2;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+
+
+/* test1 */
+#splash {
+    position:fixed ;
+    left:50px;
+    right:50px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#333;
+    color:#fff;
+    margin-left:auto;margin-right:auto;
+
+}
+
+
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash_logo img {
+    width:100%;
+}
+
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.2s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+    transform: translateY(100px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+
+#container{
+    width:100%;
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+a{
+    color: #333;
+}
+
+a:hover{
+    text-decoration: none;   
+} 
+
+
+
+
+/* ここからは個別の設定をする */
+
+
+/* headerとnav */
+
+
+.header_wrapper{
+    width: 100%;
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    list-style: none;
+    display: inline-block;
+    padding: 50px 0;
+    font-size: 2.1rem;
+    text-decoration: none;
+}
+
+
+ul.nav{
+    padding: 0;
+    text-align: center;
+    align-items: center; 
+}
+
+ul.nav li{
+    display: inline-block;
+    margin-left: 40px;
+    align-items: center; 
+}
+
+/* header logo */
+
+.header_img {
+    position: relative;
+}
+
+.header_text{
+    width: 100%;
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    letter-spacing: 0.4rem;
+    max-width: 100%;
+}  
+
+.header-logo img {
+    width: 100%;
+}
+
+.header_bold{
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 0 0 3rem;
+}
+
+
+
+/* 文字回りの設定 */
+
+.eng_titile{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.jpn_titile{
+    font-size: 18px;
+    font-weight:bold;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.yellow_titile{
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.black-titile{
+    color: #222222;
+    font-weight: bold;
+}
+
+
+/* aboutに関することを書く */
+
+
+
+.about_headline{
+    margin: 0 0 6rem;
+}
+
+.about_wrapper{
+    margin: 6rem 0 8rem;
+}
+
+.about_wrapper p{
+    margin: 0 0 40px;
+}
+
+
+.image_slide{
+    display: flex;
+    justify-content: center;
+}
+
+/* course部分を書く！ */
+
+.course_section {
+    background-color: #fafafa;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.course_01_img { 
+    grid-area: 1 / 1 / 2 / 2;
+}
+.course_01_text { 
+    grid-area: 1 / 2 / 2 / 3; 
+    margin: auto;
+    text-align: left;
+}
+.course_02_text {
+    grid-area: 2 / 1 / 3 / 2; 
+    margin: auto;
+    text-align: left;
+}
+.course_02_img { 
+    grid-area: 2 / 2 / 3 / 3; 
+
+}
+.course_03_img {
+    grid-area: 3 / 1 / 4 / 2; 
+
+}
+.course_03_text {
+    grid-area: 3 / 2 / 4 / 3; 
+    margin: auto;
+    text-align: left;
+}
+
+.course_section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course_wrapper{
+    padding: 6rem 0 0 0;
+}
+
+.course_wrapper p{
+    margin: 3rem 0 6rem;
+}
+
+
+/* news */
+.news_wrapper{
+    padding: 6rem 0 6rem;
+}
+
+.news_item_wrapper{
+    padding: 6rem 0 6rem;
+    width: 96rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 0 10%;
+    text-align: left;
+    line-height: 1;
+}
+
+.news_item{
+    justify-content: space-between;
+    width: 30rem;
+}
+
+.news_item h4{
+    margin: 3rem 0 2.4rem;
+}
+
+.news_item p{
+    line-height: 1.5;
+}
+
+.news_item:hover{
+    cursor:wait;
+    filter: grayscale(100%);
+}
+
+/* News_test */
+.box{
+    opacity: 0;
+}
+
+.fadeUp {
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+@keyframes fadeUpAnime{
+    from {
+    opacity: 0;
+    transform: translateY(100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+    
+/* アニメーションスタートの遅延時間を決めるCSS*/
+
+.delay-time02{
+animation-delay: 0.5s;
+}
+
+.delay-time04{
+animation-delay: 1s;
+}
+
+
+/* access */
+
+iframe {
+    width: 100%;
+    height: 100%;
+    margin: 6rem 0 6rem;
+}
+
+.access_wrapper{
+    background-color: #fafafa;
+    padding: 6rem 0 6rem 0;
+}
+
+.access_table{
+    text-align: left;
+}
+
+.access_table table{
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 2rem;
+}
+
+
+/* contact */
+
+.contact_wrapper{
+    padding: 6rem 0 14rem 0;
+}
+
+.contact_space{
+    margin: 6rem 0 3rem;
+}
+
+/* form */
+
+.form_wrapper{
+    margin-top: 7rem;
+}
+
+.form_wrapper span{
+    margin-left: 1.6rem;
+}
+
+.contact_table{
+    border-collapse: collapse;
+    border-top: 3px #707070;
+    border: 1px#ffd61a;
+    margin: 0 auto;
+}
+
+.contact_item{
+    border-right: #ffd61a;
+    width: 24rem;
+    display: block;
+    text-align: left;
+}
+
+.contact_body{
+    width: 40rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+}
+
+.form-text {
+    width: 100%;
+    height:3.6rem;    
+    border: 1px solid #bfbfbf;
+    margin-left: 0;
+}
+
+.form_select{
+    width: 100%;
+    height:3.6rem;
+    border: 1px solid #bfbfbf;
+    margin-left: 0;
+}
+
+.contact_label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+textarea{
+    width: 100%;
+    height: 100%;
+    resize: vertical;
+    vertical-align: top;
+}
+
+.btn_submit{
+    margin: 2.1rem 0 0 0;
+} 
+
+
+/* btnの設定をする */
+
+.btn{
+    display: block;
+    background-color: #ffd61a;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 21px 0;
+    margin: auto;
+    width: 300px;
+    text-decoration: none;
+    border: none;
+}
+
+.btn:hover{
+    border-bottom-color: transparent;
+    transform: translateY(0.1875em);
+}
+
+/* footer */
+
+.footer_wrapper{
+    background-color: #707070;
+    padding: 3rem 0 3rem 0 ;
+    color: #fff;
+}
